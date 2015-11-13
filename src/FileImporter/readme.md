@@ -1,0 +1,1 @@
+﻿Practice project exploring how to deliver what the customer wants without over engineering
