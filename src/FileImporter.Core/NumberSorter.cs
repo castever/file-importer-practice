@@ -1,36 +1,30 @@
 ﻿using System;
+using System.Linq;
 
 namespace FileImporter.Core
 {
     public class NumberSorter
     {
-        public string Sort(string unsorted)
+        private int[] _numbers;
+        private string _numberString;
+
+        public string Sort(string raw)
         {
-            //split the file string into ints
-            string[] stringNumbers = unsorted.Split(',');
-            int[] numbers = new int[10];
-            for (int i = 0; i < stringNumbers.Length; i++)
-            {
-                var number = Int32.Parse(stringNumbers[i]);
-                numbers[i] = number;
-            }
+            _numberString = raw;
+            ExtractNumbers();
+            Array.Sort(_numbers);
+            BuildResultString();
+            return _numberString;
+        }
 
-            //sort the numbers
-            Array.Sort(numbers);
+        private void ExtractNumbers()
+        {
+            _numbers = _numberString.Split(',').Select(int.Parse).ToArray();
+        }
 
-            //create the new string
-            string newText = "";
-            int index = 0;
-            foreach (int number in numbers)
-            {
-                newText += number;
-                if (index < numbers.Length - 1)
-                {
-                    newText += ",";
-                }
-                index++;
-            }
-            return newText;
+        private void BuildResultString()
+        {
+            _numberString = string.Join(",", _numbers.Select(i => i.ToString()).ToArray());
         }
     }
 }
