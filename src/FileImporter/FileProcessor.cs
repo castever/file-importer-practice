@@ -3,7 +3,7 @@ using System.IO;
 
 namespace FileImporter
 {
-    class Processor
+    class FileProcessor
     {
         private NumberSorter _numberSorter;
         private string _fileText;

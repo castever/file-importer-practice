@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Processor p = new Processor();
+            FileProcessor p = new FileProcessor();
             p.Process();
         }
     }

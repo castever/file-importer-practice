@@ -12,14 +12,13 @@ namespace FileImporter.Core
         {
             _numberString = raw;
             ExtractNumbers();
-            Array.Sort(_numbers);
             BuildResultString();
             return _numberString;
         }
 
         private void ExtractNumbers()
         {
-            _numbers = _numberString.Split(',').Select(int.Parse).ToArray();
+            _numbers = _numberString.Split(',').Select(int.Parse).OrderBy(i => i).ToArray();
         }
 
         private void BuildResultString()
