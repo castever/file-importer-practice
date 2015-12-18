@@ -7,18 +7,25 @@ namespace FileImporter.Core
     {
         private int[] _numbers;
         private string _numberString;
+        private bool _isValid = false;
 
         public string Sort(string raw)
         {
             _numberString = raw;
+            ValidateInput();
             ExtractNumbers();
             BuildResultString();
             return _numberString;
         }
 
+        private void ValidateInput()
+        {
+            _isValid = !string.IsNullOrEmpty(_numberString);
+        }
+
         private void ExtractNumbers()
         {
-            _numbers = _numberString.Split(',').Select(int.Parse).OrderBy(i => i).ToArray();
+            _numbers = _isValid ? _numberString.Split(',').Select(int.Parse).OrderBy(i => i).ToArray() : new int[0];
         }
 
         private void BuildResultString()

@@ -1,7 +1,7 @@
 Framework '4.0'
 
 properties {
-    $name = "FileIMporter"
+    $name = "FileImporter"
     $birthYear = 2015
     $company = "Chad Stever"
     $configuration = 'Release'
