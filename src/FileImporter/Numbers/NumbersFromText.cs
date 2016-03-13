@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace FileImporter
+namespace FileImporter.Numbers
 {
-    public class NumbersInText : Numbers
+
+    using Text;
+
+    public class NumbersFromText : Numbers
     {
         private readonly ImmutableList<int> _numbers;
 
-        public NumbersInText(Text text)
+        public NumbersFromText(Text text)
         {
             _numbers = text.isEmpty() ?
                  new List<int>().ToImmutableList()

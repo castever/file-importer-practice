@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace FileImporter
+namespace FileImporter.Numbers
 {
     /// <summary>
     /// Iterable list of numbers

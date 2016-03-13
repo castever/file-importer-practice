@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace FileImporter
+namespace FileImporter.Numbers
 {
+
     public class SortedNumbers : Numbers
     {
         private readonly Numbers _origin;

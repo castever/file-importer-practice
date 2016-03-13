@@ -1,4 +1,4 @@
-﻿namespace FileImporter
+﻿namespace FileImporter.Text
 {
     public class TextFromString : Text
     {

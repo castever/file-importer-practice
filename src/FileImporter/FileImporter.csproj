@@ -48,14 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Numbers.cs" />
-    <Compile Include="NumbersInText.cs" />
+    <Compile Include="File\TextFile.cs" />
+    <Compile Include="Numbers\Numbers.cs" />
+    <Compile Include="Numbers\NumbersFromArray.cs" />
+    <Compile Include="Numbers\NumbersFromText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Program.old.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SortedNumbers.cs" />
-    <Compile Include="Text.cs" />
-    <Compile Include="TextFromString.cs" />
+    <Compile Include="Numbers\SortedNumbers.cs" />
+    <Compile Include="Text\Text.cs" />
+    <Compile Include="Text\TextFromString.cs" />
+    <Compile Include="Text\TextFromFile.cs" />
+    <Compile Include="Text\NumbersText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
