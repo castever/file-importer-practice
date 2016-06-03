@@ -9,11 +9,17 @@
         static void Main(string[] args)
         {
             const string url = @"D:\_temp\numbers.txt";
-            (new TextFile(url,
-                new NumbersText(
-                    new SortedNumbers(
-                        new NumbersFromText(
-                            new TextFromFile(url)))))).Write();
+            (
+                new TextFile(url,
+                    new NumbersText(
+                        new SortedNumbers(
+                            new NumbersFromText(
+                                    new TextFromFile(url)
+                                )
+                            )
+                        )
+                    )
+            ).Write();
         }
     }
 }
